@@ -18,35 +18,4 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-from __future__ import absolute_import
 
-from . import standard
-from . import tools
-
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
-
-
-# List to define the behaviour of imports of the form:
-#     from windspharm import *
-__all__ = []
-
-try:
-    from . import cdms
-    __all__.append('cdms')
-    metadata = cdms
-except ImportError:
-    pass
-
-try:
-    from . import iris
-    __all__.append('iris')
-except ImportError:
-    pass
-
-try:
-    from . import xarray
-    __all__.append('xarray')
-except ImportError:
-    pass

@@ -1,4 +1,0 @@
-include README.md
-include license.txt
-include versioneer.py
-include lib/windspharm/_version.py
